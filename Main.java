@@ -13,11 +13,10 @@ class Main {
     }
 
     static void printResult(int result) {
-        if (result == -1) {
+        if (result == -1) 
             System.out.println("El elemento no se ha encontrado");
-        } else {
+        else 
             System.out.println("Resultado encontrado en el indice " + result);
-        }
     }
 
     static int binarySearchRecursive(int[] array, int left, int right, int objective ) {
@@ -40,13 +39,11 @@ class Main {
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (array[mid] == objective) return mid;
-            if (array[mid] < objective) {
+            if (array[mid] < objective) 
                 left = mid + 1;
-            } else {
+            else
                 right = mid - 1;
-            }
         }
-
         return -1;
     }
 
