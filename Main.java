@@ -6,17 +6,13 @@ class Main {
         int array[] = {1, 5, 10, 43, 101, 202};
         int objective = 101;
         final int SIZE_ARRAY = 6;
-
         System.out.println("Búsqueda binaria por algoritmo recursivo: ");
-        int result = binarySearchRecursive(array, 0, SIZE_ARRAY - 1, objective);
-        if (result == -1) {
-            System.out.println("El elemento no se ha encontrado");
-        } else {
-            System.out.println("Resultado encontrado en el indice " + result);
-        }
-
+        printResult(binarySearchRecursive(array, 0, SIZE_ARRAY - 1, objective));
         System.out.println("\n Búsqueda binaria por algoritmo iterativo: ");
-        result = binarySearchIterative(array, 0, SIZE_ARRAY - 1, objective);
+        printResult(binarySearchIterative(array, 0, SIZE_ARRAY - 1, objective));
+    }
+
+    static void printResult(int result) {
         if (result == -1) {
             System.out.println("El elemento no se ha encontrado");
         } else {
